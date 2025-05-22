@@ -4,19 +4,19 @@
     ViewBag.title = "Create"; 
 }
 
-<h1>User</h1>
+<h1>User Registration Form</h1>
 
 <form asp-action="create" asp-controller="User" method="post">
-    <label asp-for="name"></label>
-    <input asp-for="name" />
+    <label asp-for="name">Name:</label>
+    <input asp-for="name" type ="text" placeholder="John" required /> <br />
 
-    <label asp-for="email"></label>
-    <input asp-for="email" />
+    <label asp-for="email">Email:</label>
+    <input asp-for="email" type="email" placeholder="abc@gmail.com" required /> <br />
 
-    <label asp-for="password"></label>
-    <input asp-for="password" type="password" />       
+    <label asp-for="password">Password:</label>
+    <input asp-for="password" type="password" placeholder="abc123" minlength="6" required /> <br />
     
-    <input type="submit" value="Create" class="btn btn-primary"/>
+    <input type="submit" value="Register" class="btn btn-primary"/>
 </form>
 
 
