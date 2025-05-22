@@ -1,0 +1,25 @@
+﻿@model List<User>
+@{
+    ViewBag.title = "index";
+}
+
+
+<h1>Index</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>User</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.name</td>
+                <td>@user.email</td>
+            </tr>
+        }
+    </tbody>
+</table>

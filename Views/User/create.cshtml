@@ -1,0 +1,32 @@
+﻿
+@model User
+@{
+    ViewBag.title = "Create"; 
+}
+
+<h1>User</h1>
+
+<form asp-action="create" asp-controller="User" method="post">
+    <label asp-for="name"></label>
+    <input asp-for="name" />
+
+    <label asp-for="email"></label>
+    <input asp-for="email" />
+
+    <label asp-for="password"></label>
+    <input asp-for="password" type="password" />       
+    
+    <input type="submit" value="Create" class="btn btn-primary"/>
+</form>
+
+
+
+@if (ViewBag.Message != null)
+{
+    <div style="color:green">@ViewBag.Message</div>
+}
+
+@if (ViewBag.Error != null)
+{
+    <div style="color:red">@ViewBag.Error</div>
+}
